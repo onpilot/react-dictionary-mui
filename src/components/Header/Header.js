@@ -1,31 +1,37 @@
 import { Grid, MenuItem, TextField, Typography } from '@mui/material';
 import languages from '../../data/lang-categories';
 
-const Header = ({ lang, setLang, word, setWord }) => {
+const Header = ({ search, setSearch, lang, setLang, setIsSearch }) => {
+  const handleKeyDown = (e) => {
+    if (search && e.keyCode === 13) {
+      setIsSearch(true);
+    }
+  };
+
   return (
     <div>
       <Typography variant='h1' style={{ textTransform: 'uppercase' }}>
-        {word || 'word dict'}
+        {search || 'dictionary'}
       </Typography>
       <Grid container spacing={2}>
         <Grid item xs={8}>
           <TextField
             id='standard'
             label='standard'
-            value={word}
-            onChange={(e) => setWord(e.target.value)}
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            onKeyDown={handleKeyDown}
             style={{ width: '100%' }}
           ></TextField>
         </Grid>
         <Grid item xs={4}>
           <TextField
-            id='filled-select-currency'
             select
             label='Select'
             value={lang}
             onChange={(e) => {
               setLang(e.target.value);
-              setWord('');
+              setSearch('');
             }}
             helperText='Select your language'
           >
