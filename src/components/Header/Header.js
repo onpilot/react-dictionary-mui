@@ -1,4 +1,11 @@
-import { Grid, MenuItem, TextField, Typography } from '@mui/material';
+import {
+  Box,
+  Grid,
+  MenuItem,
+  TextField,
+  Tooltip,
+  Typography,
+} from '@mui/material';
 import languages from '../../data/lang-categories';
 
 const Header = ({ search, setSearch, lang, setLang, setIsSearch }) => {
@@ -9,20 +16,22 @@ const Header = ({ search, setSearch, lang, setLang, setIsSearch }) => {
   };
 
   return (
-    <div>
-      <Typography variant='h1' style={{ textTransform: 'uppercase' }}>
-        {search || 'dictionary'}
+    <Box>
+      <Typography variant='h1' sx={{ padding: '3rem 0 1rem' }}>
+        {search || 'dictionary.'}
       </Typography>
       <Grid container spacing={2}>
         <Grid item xs={8}>
-          <TextField
-            id='standard'
-            label='standard'
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-            onKeyDown={handleKeyDown}
-            style={{ width: '100%' }}
-          ></TextField>
+          <Tooltip title='Type a word and press enter'>
+            <TextField
+              id='word-search'
+              label='word search'
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+              onKeyDown={handleKeyDown}
+              style={{ width: '100%' }}
+            ></TextField>
+          </Tooltip>
         </Grid>
         <Grid item xs={4}>
           <TextField
@@ -33,7 +42,7 @@ const Header = ({ search, setSearch, lang, setLang, setIsSearch }) => {
               setLang(e.target.value);
               setSearch('');
             }}
-            helperText='Select your language'
+            helperText='Select a language'
           >
             {languages.map((option) => (
               <MenuItem key={option.label} value={option.label}>
@@ -43,7 +52,7 @@ const Header = ({ search, setSearch, lang, setLang, setIsSearch }) => {
           </TextField>
         </Grid>
       </Grid>
-    </div>
+    </Box>
   );
 };
 
