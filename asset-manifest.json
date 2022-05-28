@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/react-dictionary-mui/static/css/main.3c75bcf6.css",
-    "main.js": "/react-dictionary-mui/static/js/main.a0754277.js",
-    "static/js/787.10a49c20.chunk.js": "/react-dictionary-mui/static/js/787.10a49c20.chunk.js",
-    "index.html": "/react-dictionary-mui/index.html",
-    "main.3c75bcf6.css.map": "/react-dictionary-mui/static/css/main.3c75bcf6.css.map",
-    "main.a0754277.js.map": "/react-dictionary-mui/static/js/main.a0754277.js.map",
-    "787.10a49c20.chunk.js.map": "/react-dictionary-mui/static/js/787.10a49c20.chunk.js.map"
+    "main.css": "/onpilot/react-dictionary-mui/static/css/main.2f047b17.css",
+    "main.js": "/onpilot/react-dictionary-mui/static/js/main.8368a94f.js",
+    "static/js/787.10a49c20.chunk.js": "/onpilot/react-dictionary-mui/static/js/787.10a49c20.chunk.js",
+    "index.html": "/onpilot/react-dictionary-mui/index.html",
+    "main.2f047b17.css.map": "/onpilot/react-dictionary-mui/static/css/main.2f047b17.css.map",
+    "main.8368a94f.js.map": "/onpilot/react-dictionary-mui/static/js/main.8368a94f.js.map",
+    "787.10a49c20.chunk.js.map": "/onpilot/react-dictionary-mui/static/js/787.10a49c20.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3c75bcf6.css",
-    "static/js/main.a0754277.js"
+    "static/css/main.2f047b17.css",
+    "static/js/main.8368a94f.js"
   ]
 }
