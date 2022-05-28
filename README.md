@@ -4,7 +4,7 @@ This project was built as part of my [#100DaysOfCode Journey](https://github.com
 
 ## Preview
 
-<img src="https://github.com/onpilot/react-dictionary-mui/blob/master/preview.jpg?raw=true" alt="React Dictionary App with Material UI" style="width:400px;"/>
+<img src="https://github.com/onpilot/react-dictionary-mui/blob/main/preview.jpg?raw=true" alt="React Dictionary App with Material UI" style="width:400px;"/>
 
 ## Credit
 
