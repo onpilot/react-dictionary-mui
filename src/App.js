@@ -82,7 +82,11 @@ function App() {
             ERROR: No entry found! Try another word.
           </Alert>
         ) : (
-          <Definitions isLoading={isLoading} data={data}></Definitions>
+          <Definitions
+            isLoading={isLoading}
+            data={data}
+            darkmode={darkmode}
+          ></Definitions>
         )}
       </Container>
       <SocialLinks />

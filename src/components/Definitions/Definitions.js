@@ -9,8 +9,9 @@ import {
   ListItemText,
   Typography,
 } from '@mui/material';
+import './Definitions.css';
 
-const Definitions = ({ isLoading, data }) => {
+const Definitions = ({ isLoading, data, darkmode }) => {
   if (!data) {
     return (
       <Box>
@@ -27,7 +28,7 @@ const Definitions = ({ isLoading, data }) => {
       ) : (
         <Box>
           <Typography variant='body1'>Phonetics</Typography>
-          <List>
+          <List className={darkmode ? 'dark r4' : 'light r4'}>
             {data[0].phonetics ? (
               data[0].phonetics.map((e, i) => (
                 <ListItem disablePadding key={`phonetic-${i}`}>
@@ -52,7 +53,10 @@ const Definitions = ({ isLoading, data }) => {
           <List>
             {data.map((d) =>
               d.meanings.map((e, i) => (
-                <ListItemButton key={i}>
+                <ListItemButton
+                  key={i}
+                  className={darkmode ? 'dark r4 mt20' : 'light r4 mt20'}
+                >
                   {
                     <Box>
                       <Typography variant='body2'>{e.partOfSpeech}</Typography>
