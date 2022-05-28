@@ -22,7 +22,7 @@ const Header = ({ search, setSearch, lang, setLang, setIsSearch }) => {
       </Typography>
       <Grid container spacing={2}>
         <Grid item xs={8}>
-          <Tooltip title='Type a word and press enter'>
+          <Tooltip title='type a word and press enter' placement='top-end'>
             <TextField
               id='word-search'
               label='word search'
@@ -30,26 +30,38 @@ const Header = ({ search, setSearch, lang, setLang, setIsSearch }) => {
               onChange={(e) => setSearch(e.target.value)}
               onKeyDown={handleKeyDown}
               style={{ width: '100%' }}
-            ></TextField>
+            />
           </Tooltip>
         </Grid>
         <Grid item xs={4}>
-          <TextField
-            select
-            label='Select'
-            value={lang}
-            onChange={(e) => {
-              setLang(e.target.value);
-              setSearch('');
-            }}
-            helperText='Select a language'
+          <Tooltip
+            title='the new api currently only support english'
+            placement='top-end'
           >
-            {languages.map((option) => (
-              <MenuItem key={option.label} value={option.label}>
-                {option.value}
-              </MenuItem>
-            ))}
-          </TextField>
+            <TextField
+              select
+              label='Select'
+              value={lang}
+              onChange={(e) => {
+                setLang(e.target.value);
+                setSearch('');
+              }}
+              helperText='Select a language'
+            >
+              {languages.map((option) => (
+                <MenuItem
+                  key={option.label}
+                  value={option.label}
+                  // !NOTE: disable languages other than english
+                  // the new api currently only support english
+                  // see: https://github.com/meetDeveloper/freeDictionaryAPI/issues/102
+                  disabled={option.label !== 'en' ? true : false}
+                >
+                  {option.value}
+                </MenuItem>
+              ))}
+            </TextField>
+          </Tooltip>
         </Grid>
       </Grid>
     </Box>
