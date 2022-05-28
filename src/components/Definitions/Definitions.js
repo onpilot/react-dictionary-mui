@@ -32,7 +32,7 @@ const Definitions = ({ isLoading, data, darkmode }) => {
             {data[0].phonetics ? (
               data[0].phonetics.map((e, i) => (
                 <ListItem disablePadding key={`phonetic-${i}`}>
-                  <ListItemButton>
+                  <ListItemButton className='phonetics-container'>
                     {e.text ? (
                       <ListItemText primary={e.text} />
                     ) : (

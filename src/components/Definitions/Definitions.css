@@ -14,3 +14,9 @@
   border-radius: 4;
   background-image: linear-gradient(43deg, #ffafbd 0%, #ffc3a0 100%);
 }
+
+@media only screen and (max-width: 500px) {
+  .phonetics-container {
+    display: block !important;
+  }
+}

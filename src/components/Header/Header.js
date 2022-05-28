@@ -7,6 +7,7 @@ import {
   Typography,
 } from '@mui/material';
 import languages from '../../data/lang-categories';
+import './Header.css';
 
 const Header = ({ search, setSearch, lang, setLang, setIsSearch }) => {
   const handleKeyDown = (e) => {
@@ -17,7 +18,7 @@ const Header = ({ search, setSearch, lang, setLang, setIsSearch }) => {
 
   return (
     <Box>
-      <Typography variant='h1' sx={{ padding: '3rem 0 1rem' }}>
+      <Typography variant='h1' className='title'>
         {search || 'dictionary.'}
       </Typography>
       <Grid container spacing={2}>
